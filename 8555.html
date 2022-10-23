@@ -1,0 +1,90 @@
+<!doctype html>
+<html>
+
+<head>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.6.3/css/foundation.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.6.3/js/foundation.min.js"></script>
+    <style>
+        .cell {
+            border: 1px solid black;
+        }
+
+        #sidebar {
+            padding: 10px;
+            height: 600px;
+            background-color: plum;
+        }
+
+        #body {
+            padding: 10px;
+            height: 600px;
+        }
+
+        .nav {
+            margin: 10px;
+        }
+
+        #header {
+            background: gray;
+        }
+
+        #entire {
+            margin: 5px;
+        }
+
+        #img1 {
+            width: 100%;
+            height: 100px;
+        }
+
+        #bottom {
+            height: 30px;
+        }
+    </style>
+    <script>
+        $(document).ready(function () {
+            $("#alert").on("click", callAlert);
+            $("#text").on("click", changeText);
+
+            function callAlert() {
+                alert("I am now showing an alert after you clicked the button!");
+            }
+            function changeText() {
+                $("#body").html("This is the new text after you click UpdateBody");
+            }
+
+        });
+
+    </script>
+</head>
+
+<body>
+    <div id=entire>
+        <div class="grid-x">
+            <div id=header class="cell small-12 medium-12 large-12 text-right">
+                <button id=text class="button nav">UpdateBody</button>
+                <button id=alert class="button nav">Alert</button>
+            </div>
+            <div class="cell small-12 medium-12 large-12">
+                <img id=img1 src=https://ohcbrands.com/wp-content/uploads/2018/04/69648590-header-wallpapers.jpg>
+            </div>
+        </div>
+        <div class="grid-x">
+            <div id=sidebar class="cell small-12 medium-4 large-4">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+            </div>
+            <div id=body class="cell small-12 medium-8 large-8">voluptatem accusantium doloremque laudantium, totam rem
+                aperiam, eaque ipsa quae
+            </div>
+        </div>
+        <div class="grid-x">
+            <div id=bottom class="cell small-12 medium-12 large-12">
+                Â© 2022 Phong Vu, Bachelors, All Rights Reserved Designed by Phong Vu, Bachelors
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
